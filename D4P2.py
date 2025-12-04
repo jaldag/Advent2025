@@ -15,6 +15,13 @@ while thisCount != 0:
 			paperCount = 0
 			if grid[x][y] == ".":
 				continue
+
+			#Looked up easier solution afterwards
+			#for i in (-1, 0, 1):
+			#	for j in (-1, 0, 1):
+			#		if x+i >= 0 and x+i < len(grid) and y+j >= 0 and y+j < len(grid[x]) and (i, j) != (0, 0) and grid[x+i][y+j] == "@":
+			#			paperCount += 1
+			
 			if x > 0 and grid[x-1][y] == "@":
 				paperCount += 1
 			if x < len(grid) - 1 and grid[x+1][y] == "@":
